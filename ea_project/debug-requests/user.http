@@ -1,0 +1,42 @@
+
+
+### Create a user
+POST http://localhost:8090/users
+Content-Type: application/json
+
+{
+  "height": 180,
+  "physicalActivity": "intense",
+  "username": "Novak",
+  "age": 40,
+  "sex": "man"
+}
+
+### Get all users
+GET http://localhost:8090/users
+
+### get average of measurements of month
+@idNovak =78e1ec0a-bbda-4969-bf20-8aeee0672c3f
+@year=2024
+@month=1
+GET http://localhost:8090/users/averageBMI/{{idNovak}}/{{year}}/{{month}}
+
+
+### get metabolism info
+GET http://localhost:8090/users/metabolismInfo?userId=7acb1eb3-1472-4da6-bf0d-8ed838da7971&currentWeight=60
+
+
+### update user
+PUT http://localhost:8090/users/f1035037-c182-40c8-84ac-cb4754d35302
+Content-Type: application/json
+
+{
+  "height": 200,
+  "physicalActivity": "easy",
+  "username": "Novakova",
+  "age": 50,
+  "sex": "woman"
+}
+
+### delete user
+DELETE http://localhost:8090/users/f1035037-c182-40c8-84ac-cb4754d35302

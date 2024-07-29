@@ -1,0 +1,16 @@
+### Create a measurement ,
+#  "date": "2024-04-10"
+
+@idNovak="b93ae496-9d60-45e3-98ec-7de9759f5a83"
+POST http://localhost:8090/measurements
+Content-Type: application/json
+
+
+{
+  "date": "2024-01-01",
+  "weight": 90.0,
+  "userId": {{idNovak}}
+}
+
+### delete measurement
+DELETE http://localhost:8090/measurements/1

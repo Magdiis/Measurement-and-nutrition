@@ -1,0 +1,16 @@
+### create food record
+POST http://localhost:8090/food
+Content-Type: application/json
+
+{
+  "quantity": 50.0,
+  "date": "2024-01-01",
+  "productId": 1,
+  "userId": "80fe744d-3226-4d93-95f5-908d5eb310b7"
+}
+
+
+### get day info
+
+GET http://localhost:8090/food/dayInfo?date=2024-01-01&userId=dd24fe20-002f-4088-97a0-391853aaf72f
+
